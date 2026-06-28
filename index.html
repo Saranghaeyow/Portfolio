@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Science Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">DS.PORTFOLIO</a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-tag">Data Science Student</div>
+  <h1 class="hero-name">Your<br><span>Name</span></h1>
+  <div class="hero-role">Data Analyst · Problem Solver · Lifelong Learner</div>
+  <p class="hero-desc">
+    Turning raw, messy data into clean insights. Currently studying data science 
+    and building projects one dataset at a time.
+  </p>
+  <div class="hero-cta">
+    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="#contact" class="btn-outline">Get in Touch</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="section-label">Work</div>
+  <h2 class="section-title reveal">Featured <span style="color:var(--accent)">Projects</span></h2>
+  <p class="section-sub reveal">A growing collection of data science work — from cleaning raw datasets to extracting insights from the web.</p>
+
+  <div class="projects-grid" id="projects-grid">
+    <!-- Project 1: Data Cleaning -->
+    <div class="project-card" onmousemove="cardGlow(this, event)">
+      <span class="project-num">01</span>
+      <div class="project-status status-done"><span class="status-dot"></span>Completed</div>
+      <div class="project-icon">🧹</div>
+      <div class="project-title">Data Cleaning Pipeline</div>
+      <p class="project-desc">Built an end-to-end data cleaning pipeline to handle missing values, outliers, inconsistent formatting, and duplicate records across large CSV datasets.</p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Data QA</span>
+      </div>
+      <a href="https://saranghaeyow.github.io/Interest_Cal/" class="project-link" target="_blank">View Project</a>
+    </div>
+
+    <!-- Project 2: Web Scraping -->
+    <div class="project-card" onmousemove="cardGlow(this, event)">
+      <span class="project-num">02</span>
+      <div class="project-status status-done"><span class="status-dot"></span>Completed</div>
+      <div class="project-icon">🕷️</div>
+      <div class="project-title">Web Scraping Suite</div>
+      <p class="project-desc">Automated extraction of structured data from websites using BeautifulSoup and Selenium. Includes rate-limiting, proxy rotation, and structured JSON/CSV export.</p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">BeautifulSoup</span>
+        <span class="tag">Selenium</span>
+        <span class="tag">Requests</span>
+      </div>
+      <a href="#" class="project-link">View Project</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="section-label">Capabilities</div>
+  <h2 class="section-title reveal">Technical <span style="color:var(--accent)">Skills</span></h2>
+  <p class="section-sub reveal">Tools and technologies I've been working with and actively learning.</p>
+
+  <div class="skills-grid reveal">
+    <div class="skill-category">
+      <div class="skill-cat-title">Data Engineering</div>
+      <div class="skill-item"><div class="skill-name"><span>Python</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Pandas</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>SQL</span><span>Learning</span></div><div class="skill-bar"><div class="skill-fill" data-width="60"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>NumPy</span><span>Learning</span></div><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">Web Scraping</div>
+      <div class="skill-item"><div class="skill-name"><span>BeautifulSoup</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Selenium</span><span>Learning</span></div><div class="skill-bar"><div class="skill-fill" data-width="62"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Scrapy</span><span>Beginner</span></div><div class="skill-bar"><div class="skill-fill" data-width="40"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Requests</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-cat-title">Analysis & Viz</div>
+      <div class="skill-item"><div class="skill-name"><span>Matplotlib</span><span>Learning</span></div><div class="skill-bar"><div class="skill-fill" data-width="58"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Seaborn</span><span>Beginner</span></div><div class="skill-bar"><div class="skill-fill" data-width="45"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Excel / GSheets</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-fill" data-width="77"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Jupyter</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Journey / Timeline -->
+<section id="journey">
+  <div class="section-label">Progress</div>
+  <h2 class="section-title reveal">Learning <span style="color:var(--accent)">Journey</span></h2>
+  <p class="section-sub reveal">Every expert was once a beginner. Here's where I've been and where I'm headed.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024 — Present</div>
+      <div class="timeline-title">📚 Studying Data Science</div>
+      <p class="timeline-body">Enrolled in a formal data science program, covering statistics, Python, data wrangling, and machine learning fundamentals.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024</div>
+      <div class="timeline-title">🧹 Data Cleaning Project</div>
+      <p class="timeline-body">Built my first real data pipeline — learned to handle messy real-world CSV files, deal with NaN values, and standardize inconsistent data entries.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024</div>
+      <div class="timeline-title">🕷️ Web Scraping Project</div>
+      <p class="timeline-body">Learned BeautifulSoup and Selenium to extract data from websites. Built automated scrapers and stored data in structured formats.</p>
+    </div>
+    <div class="timeline-item" style="opacity:0.4">
+      <div class="timeline-dot" style="background: var(--text3); box-shadow: none;"></div>
+      <div class="timeline-date">Upcoming</div>
+      <div class="timeline-title">🤖 Machine Learning & Beyond</div>
+      <p class="timeline-body">Next milestones: exploratory data analysis, predictive modeling, and eventually deploying data products. The journey continues.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="section-label">About</div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <h2 class="section-title" style="margin-bottom:1.5rem">Who I <span style="color:var(--accent)">Am</span></h2>
+      <p>I'm a <strong>data science student</strong> based in Davao, Philippines, passionate about finding structure in chaos. I believe every messy dataset has a story worth telling.</p>
+      <p>My current focus is on the <strong>foundations</strong> — data collection, cleaning, and exploration. These unglamorous skills are where most data projects live or die.</p>
+      <p>This portfolio is a <strong>living document</strong> of my progress. It grows as I grow — project by project, skill by skill.</p>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat-box"><span class="stat-num">2+</span><span class="stat-label">Projects Completed</span></div>
+      <div class="stat-box"><span class="stat-num">3+</span><span class="stat-label">Tools Learned</span></div>
+      <div class="stat-box"><span class="stat-num">∞</span><span class="stat-label">Things to Learn</span></div>
+      <div class="stat-box"><span class="stat-num">100%</span><span class="stat-label">Committed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="section-label">Connect</div>
+  <h2 class="section-title reveal">Let's <span style="color:var(--accent)">Connect</span></h2>
+  <p class="section-sub reveal" style="margin: 0 auto 0; text-align: center;">Open to collaborations, feedback, and fellow data science students. Always learning, always open to conversations.</p>
+  <div class="contact-grid reveal">
+    <a href="mailto:your@email.com" class="contact-link">✉ Email Me</a>
+    <a href="https://github.com/" class="contact-link" target="_blank">⌥ GitHub</a>
+    <a href="https://linkedin.com/" class="contact-link" target="_blank">⊞ LinkedIn</a>
+    <a href="https://kaggle.com/" class="contact-link" target="_blank">◈ Kaggle</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <span>© 2025 — Your Name</span>
+  <span>BUILT WITH CURIOSITY &amp; PYTHON</span>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
